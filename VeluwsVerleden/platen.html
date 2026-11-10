@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veluws Verleden — Kies een schoolplaat</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="platen-screen">
+    <header class="platen-header">
+      <a href="index.html" class="brand">Veluws Verleden</a>
+      <h1>Kies hier uw informatie plaat</h1>
+      <p class="platen-intro">Acht schoolplaten vertellen het verhaal van de Veluwe, van de
+        vorming van het landschap tot oorlog en vrede. Op dit moment is één plaat volledig
+        interactief uitgewerkt &mdash; de overige volgen later.</p>
+    </header>
+
+    <ul class="platen-grid" id="platen-grid"></ul>
+
+    <div class="platen-error" id="platen-error" hidden>
+      <p>De schoolplaten konden niet worden geladen.</p>
+      <button type="button" id="platen-retry">Opnieuw proberen</button>
+    </div>
+  </main>
+
+  <script src="js/platen-data.js"></script>
+  <script src="js/platen.js"></script>
+</body>
+</html>
