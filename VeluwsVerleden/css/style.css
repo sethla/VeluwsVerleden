@@ -472,6 +472,7 @@ body {
 
 .viewer-page {
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -580,13 +581,14 @@ body {
   align-items: center;
   gap: 0.6rem;
   width: 100%;
-  padding: 0.5rem 0.6rem;
+  min-height: 3rem;
+  padding: 0.55rem 0.6rem;
   border: none;
   border-radius: 8px;
   background: transparent;
   color: var(--ink);
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   line-height: 1.3;
   cursor: pointer;
   transition: background 0.15s ease;
@@ -627,6 +629,7 @@ body {
   min-height: 0;
   background: #253128;
   overflow: hidden;
+  touch-action: none;
 }
 
 .viewer-controls {
@@ -640,8 +643,8 @@ body {
 }
 
 .viewer-controls button {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3.25rem;
+  height: 3.25rem;
   border: none;
   border-radius: 50%;
   background: var(--parchment);
@@ -773,8 +776,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -782,7 +785,7 @@ body {
   border-radius: 50%;
   background: var(--accent);
   color: #fdf6ea;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   pointer-events: auto;

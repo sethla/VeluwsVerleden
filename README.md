@@ -21,7 +21,7 @@ Je kunt ook de map `VeluwsVerleden/` openen in Visual Studio Code en de pagina m
 
 - **Startpagina** (`index.html`): introductie en link naar het overzicht.
 - **Schoolplatenoverzicht** (`platen.html`): toont de acht geplande platen. Alleen plaat 3 is momenteel interactief beschikbaar.
-- **Interactieve plaat** (`plaat3.html`): de plaat *Oog in oog met de Romeinen* bij Ermelo, met tien klikbare verhalen, zoom/pan, voortgang, quizzen en kleine spellen.
+- **Interactieve plaat** (`plaat3.html`): de plaat *Oog in oog met de Romeinen* bij Ermelo, met tien klikbare verhalen, zoomen en slepen met muis of touch, voortgang, quizzen en kleine spellen. De grotere knoppen en hotspots zijn geschikt voor bediening op een digibord.
 - **Eén gedeelde vormgeving** (`css/style.css`): kleuren, componenten, focusstijlen en responsive gedrag voor alle pagina’s.
 
 ## Mappen en bestanden
