@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------- Elementen ----------
 
   const canvas = document.getElementById("viewer-canvas");
+  const stage = document.querySelector(".viewer-stage");
   const transformEl = document.getElementById("viewer-transform");
   const image = document.getElementById("viewer-image");
   const loading = document.getElementById("viewer-loading");
@@ -197,8 +198,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let sleepStart = null;
   let knijpStart = null;
 
-  function pointerStart(e, target) {
-    target.setPointerCapture(e.pointerId);
+  function pointerStart(e) {
+    if (e.target.closest && e.target.closest(".viewer-controls")) return;
+    e.target.setPointerCapture(e.pointerId);
     actievePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
     if (actievePointers.size === 1) {
@@ -251,13 +253,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  canvas.addEventListener("pointerdown", (e) => pointerStart(e, canvas));
-  canvas.addEventListener("pointermove", pointerVerplaatst);
-  canvas.addEventListener("pointerup", pointerEinde);
-  canvas.addEventListener("pointercancel", pointerEinde);
-  canvas.addEventListener("pointerleave", (e) => {
-    if (e.pointerType !== "touch") pointerEinde(e);
-  });
+  stage.addEventListener("pointerdown", pointerStart);
+  stage.addEventListener("pointermove", pointerVerplaatst);
+  stage.addEventListener("pointerup", pointerEinde);
+  stage.addEventListener("pointercancel", pointerEinde);
 
   // ---------- Muiswiel zoomen ----------
 
